@@ -1,6 +1,11 @@
-// The Word You'd Delete From the Dictionary — entry program.
+// The Word You'd Delete From the Dictionary
+// — entry program.
 //
 // The entry is exactly one word, written to /output/entry.txt.
+//
+// Word-choice strategy: pick the one word whose removal removes the
+// removal itself — a self-referential paradox, so the entry is the joke
+// and needs no setup, punchline, or second word to land.
 //
 // The pick: "delete".
 // Erasing "delete" erases deletion itself: once the word is gone, nothing
@@ -9,7 +14,6 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const WORD = "delete";
-
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", WORD, "utf8");
 
